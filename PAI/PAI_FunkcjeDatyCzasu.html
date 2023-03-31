@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+	<title>Baza danych sklep komputerowy</title>
+	<style type="text/css">
+		html,
+		body {
+			background-color: #fff;
+			color: #000;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		#top {
+			width: 780px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: left;
+		}
+
+		#NAGLOWEK {
+			background-color: #aaa;
+			text-align: center;
+		}
+
+		#MENU {
+			width: 180px;
+			height: 200px;
+			float: left;
+			overflow: hidden;
+			background-color: #ccc;
+		}
+
+		#TRESC {
+			width: 600px;
+			height: 200px;
+			float: left;
+			overflow: hidden;
+			background-color: #fff;
+		}
+
+		#STOPKA {
+			clear: both;
+			width: 100%;
+			background-color: #aaa;
+			text-align: center;
+		}
+
+		#TRESC input#przycisk {
+			width: 70px;
+			margin-left: 40px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			color: red;
+
+		}
+
+		h2,
+		#czas,
+		#data,
+		#jaki {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="top">
+		<div id="NAGLOWEK">Naglowek</div>
+		<div id="MENU">
+			<h2>Formularz czasu </h2>
+		</div>
+		<div id="TRESC">
+			<h2>Informacje o czasie:</h2>
+			<table border="0" width="450px">
+				<tr>
+					<td>
+						<center>Aktualny czas:</center>
+					</td>
+
+					<td>
+						<center> Aktualna data:</center>
+					</td>
+
+					<td>
+						<center> Dzien tygodnia:</center>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input id="przycisk" type="button" value="czas" onclick="czas();" />
+					</td>
+
+					<td>
+						<input id="przycisk" type="button" value="data" onclick="data();" />
+					</td>
+
+					<td>
+						<input id="przycisk" type="button" value="jaki dzien" onclick="dzien();" />
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<div id="czas"></div>
+					</td>
+
+					<td>
+						<div id="data"></div>
+					</td>
+
+					<td>
+						<div id="jaki"></div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div id="STOPKA">Stopka serwisu</div>
+	</div>
+	<script>
+		function czas() {
+			var czas = new Date();
+			var godz = czas.getHours();
+			godz = ("0" + godz).slice(-2);
+			var min = czas.getMinutes();
+			min = ("0" + min).slice(-2);
+			var sek = czas.getSeconds();
+			sek = ("0" + sek).slice(-2);
+			document.getElementById('czas').innerHTML = " " + godz + ":" + min + ":" + sek;
+		}
+		function data() {
+			var czas = new Date();
+			const data = czas.toLocaleDateString("pl-PL", { year: "numeric", month: "2-digit", day: "2-digit"});
+			document.getElementById('data').innerHTML = data;
+		}
+		function dzien() {
+			var czas = new Date();
+			var dni = new Array("Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota");
+			document.getElementById('jaki').innerHTML = " " + dni[czas.getDay()];
+		}
+	</script>
+</body>
+
+</html>
