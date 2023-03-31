@@ -14,14 +14,17 @@ td {
    border-spacing: 0;
    width: 50%;
 }
+
 td {
    background-color: #A5D7E8;
 }
+
 th {
    background-color: #576CBC;
    color: white;
-   text-shadow: 1px 1px 1px black ;
+   text-shadow: 1px 1px 1px black;
 }
+
 th,
 td {
    padding: 15px;
