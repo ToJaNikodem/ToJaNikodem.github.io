@@ -1,0 +1,10 @@
+1. SELECT name FROM pr_lang WHERE id_lang=2;
+2. SELECT name FROM pr_category_lang GROUP BY name;
+3.1. SELECT COUNT(*) AS total FROM pr_product;
+3.2. SELECT COUNT(*) AS total FROM pr_product WHERE active=1;
+4. SELECT name FROM pr_manufacturer;
+5. SELECT p.id_product FROM pr_product p LEFT JOIN pr_image i on p.id_product=i.id_product WHERE i.id_product is null;
+7. SELECT id_product FROM pr_product WHERE on_sale=1; 
+8. SELECT name FROM pr_tax_lang;
+9. SELECT payment_method FROM pr_order_payment;
+10. SELECT machine_type FROM pr_furgonetka_cart_delivery_machine;
