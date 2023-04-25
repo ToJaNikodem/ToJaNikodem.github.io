@@ -23,9 +23,13 @@ header {
    font-size: 20px;
 }
 
+nav {
+   justify-content: center;
+}
+
 ul {
+   width: fit-content;
    margin: auto;
-   width: 30vw;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
@@ -37,10 +41,15 @@ li {
    line-height: 60px;
 }
 
+li:nth-last-child(1) a{
+   border-right: #fff 1px solid;
+}
+
 header a {
    text-decoration: none;
    color: white;
    padding: 10px;
+   border-left: #fff 1px solid;
 }
 
 header a:hover {
@@ -83,28 +92,7 @@ table {
 
 }
 
-@media (min-width: 600px) and (max-width: 1000px) {
-   .content {
-      width: 44vw;
-   }
-
-   ul {
-      width: 55vw;
-   }
-}
-
-@media (max-width: 600px) {
-   main {
-      display: block;
-   }
-
-   .content {
-      width: 92vw;
-   }
-
-   ul {
-      width: 100vw;
-      justify-content: space-around;
-   }
+@media (max-width: 500px) {
+      
 }
 
