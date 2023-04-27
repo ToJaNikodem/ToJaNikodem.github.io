@@ -9,8 +9,14 @@ body {
 
 main {
    clear: both;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -ms-flex-wrap: wrap;
    flex-wrap: wrap;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: row;
    flex-direction: row;
 }
 
@@ -18,24 +24,38 @@ header {
    height: 60px;
    width: 100%;
    background-color: #0b2447;
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
    font-family: Helvetica;
    font-size: 20px;
 }
 
 nav {
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
    justify-content: center;
 }
 
 ul {
+   width: -webkit-fit-content;
+   width: -moz-fit-content;
    width: fit-content;
    margin: auto;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: row;
    flex-direction: row;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
    justify-content: space-between;
 }
 
 li {
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
    line-height: 60px;
    border-left: #fff 1px solid;
@@ -84,6 +104,7 @@ table {
 }
 
 .content {
+   -webkit-box-sizing: border-box;
    box-sizing: border-box;
    width: 20vw;
    margin-top: 50px;
