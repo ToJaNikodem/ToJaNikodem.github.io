@@ -105,5 +105,28 @@ table {
 }
 
 @media (max-width: 500px) {
-   
+   nav ul {
+      display: none;
+   }
+
+   .content {
+      margin-top: 10px;
+   }
+
+   .hamburger {
+      height: 8px;
+      width: 60px;
+      background-color: white;
+      display: block;
+      margin-bottom: 8px;
+   }
+   .hamburger:nth-last-child(1) {
+      margin-bottom: 0;
+   }
+
+   #menu {
+      padding: 10px;
+      width: fit-content;
+   }
+      
 }
