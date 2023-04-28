@@ -1,15 +1,16 @@
-document.getElementById("hamburger").addEventListener("click", showMenu);
+document.getElementById("hamburger").addEventListener("click", toggleMenu);
 
 const menu = document.getElementById("menu");
 const hamburger = document.getElementById("hamburger");
 
-function showMenu() {
+function toggleMenu() {
 	menu.classList.toggle("active");
 	hamburger.classList.toggle("active");
 }
 
 window.onclick = function (event) {
-	if (!event.target.matches("span") || !event.target.matches("#hamburger")) {
+	console.log(event.target);
+	if (!event.target.matches("#hamburger") && !event.target.closest("#hamburger")) {
 		if (
 			menu.classList.contains("active") &&
 			hamburger.classList.contains("active")
