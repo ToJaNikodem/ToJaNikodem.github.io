@@ -1,23 +1,23 @@
 .content {
-   width: 92vw;
+   width: 92%;
    margin-top: 10px;
 }
 
 #hamburger span {
-   height: 9px;
-   width: 60px;
-   background-color: white;
-   display: block;
-   border-radius: 9px;
-   opacity: 1;
-   position: absolute;
-   left: 0;
    -webkit-transform: rotate(0deg);
    -ms-transform: rotate(0deg);
-   transform: rotate(0deg);
    -webkit-transition: .25s ease-in-out;
    -o-transition: .25s ease-in-out;
+   display: block;
+   position: absolute;
+   left: 0;
+   opacity: 1;
+   transform: rotate(0deg);
+   width: 60px;
+   height: 9px;
    transition: .25s ease-in-out;
+   background-color: white;
+   border-radius: 9px;
 }
 
 #hamburger span:nth-last-child(1) {
@@ -37,9 +37,9 @@
 }
 
 #hamburger.active span:nth-child(1) {
-   top: 18px;
    -webkit-transform: rotate(135deg);
    -ms-transform: rotate(135deg);
+   top: 18px;
    transform: rotate(135deg);
 }
 
@@ -48,49 +48,52 @@
 }
 
 #hamburger.active span:nth-child(3) {
-   top: 18px;
    -webkit-transform: rotate(-135deg);
    -ms-transform: rotate(-135deg);
+   top: 18px;
    transform: rotate(-135deg);
 }
 
 #hamburger {
-   height: 45px;
-   width: 60px;
    -webkit-transform: rotate(0deg);
    -ms-transform: rotate(0deg);
-   transform: rotate(0deg);
-   cursor: pointer;
+   -webkit-transition: .5s ease-in-out;
+   -o-transition: .5s ease-in-out;
    position: relative;
    top: 8px;
    left: 8px;
-   -webkit-transition: .5s ease-in-out;
-   -o-transition: .5s ease-in-out;
+   transform: rotate(0deg);
+   width: 60px;
+   height: 45px;
    transition: .5s ease-in-out;
+   cursor: pointer;
 }
 
 #menu {
-   position: absolute;
-   top: 60px;
-   width: 100vw;
-   left: -100vw;
-   height: 100%;
    -webkit-transition: 0.4s ease-in-out;
    -o-transition: 0.4s ease-in-out;
+   position: absolute;
+   top: 60px;
+   left: -100%;
+   opacity: 0;
+   overflow: hidden;
+   width: 100%;
+   height: 100%;
    transition: 0.4s ease-in-out;
 }
 
 #menu.active {
-   left: 0;
-   position: absolute;
-   top: 60px;
    -webkit-box-orient: horizontal;
    -webkit-box-direction: normal;
    -ms-flex-direction: row;
-   flex-direction: row;
-   height: 100%;
-   background-color: #122e5a;
    -webkit-transition: 0.4s ease-in-out;
    -o-transition: 0.4s ease-in-out;
+   flex-direction: row;
+   position: absolute;
+   top: 60px;
+   left: 0;
+   opacity: 1;
+   height: 100%;
    transition: 0.4s ease-in-out;
+   background-color: #122e5a;
 }
