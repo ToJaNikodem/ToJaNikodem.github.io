@@ -9,7 +9,7 @@ function showMenu() {
 }
 
 window.onclick = function (event) {
-	if (!event.target.matches("span")) {
+	if (!event.target.matches("span") || !event.target.matches("#hamburger")) {
 		if (
 			menu.classList.contains("active") &&
 			hamburger.classList.contains("active")
