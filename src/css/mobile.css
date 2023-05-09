@@ -1,6 +1,6 @@
 .content {
    width: 92%;
-   margin-top: 10px;
+   margin-top: 1rem;
 }
 
 #hamburger span {
@@ -13,11 +13,11 @@
    left: 0;
    opacity: 1;
    transform: rotate(0deg);
-   width: 60px;
-   height: 9px;
+   width: 4rem;
+   height: 0.5rem;
    transition: .25s ease-in-out;
    background-color: white;
-   border-radius: 9px;
+   border-radius: 0.5rem;
 }
 
 #hamburger span:nth-last-child(1) {
@@ -29,17 +29,17 @@
 }
 
 #hamburger span:nth-child(2) {
-   top: 18px;
+   top: 1rem;
 }
 
 #hamburger span:nth-child(3) {
-   top: 36px;
+   top: 2rem;
 }
 
 #hamburger.active span:nth-child(1) {
    -webkit-transform: rotate(135deg);
    -ms-transform: rotate(135deg);
-   top: 18px;
+   top: 1rem;
    transform: rotate(135deg);
 }
 
@@ -50,7 +50,7 @@
 #hamburger.active span:nth-child(3) {
    -webkit-transform: rotate(-135deg);
    -ms-transform: rotate(-135deg);
-   top: 18px;
+   top: 1rem;
    transform: rotate(-135deg);
 }
 
@@ -60,11 +60,11 @@
    -webkit-transition: .5s ease-in-out;
    -o-transition: .5s ease-in-out;
    position: relative;
-   top: 8px;
-   left: 8px;
+   top: 0.75rem;
+   left: 0.75rem;
    transform: rotate(0deg);
-   width: 60px;
-   height: 45px;
+   width: 4rem;
+   height: 3rem;
    transition: .5s ease-in-out;
    cursor: pointer;
 }
@@ -73,7 +73,7 @@
    -webkit-transition: 0.4s ease-in-out;
    -o-transition: 0.4s ease-in-out;
    position: absolute;
-   top: 60px;
+   top: 4rem;
    left: -100%;
    opacity: 0;
    overflow: hidden;
@@ -90,7 +90,7 @@
    -o-transition: 0.4s ease-in-out;
    flex-direction: row;
    position: absolute;
-   top: 60px;
+   top: 4rem;
    left: 0;
    opacity: 1;
    height: 100%;
