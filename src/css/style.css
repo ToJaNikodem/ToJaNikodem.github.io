@@ -49,6 +49,7 @@ ul {
 
 li {
    display: -webkit-box;
+   box-sizing: border-box;
    border-left: #fff 1px solid;
    line-height: 4rem;
 }
