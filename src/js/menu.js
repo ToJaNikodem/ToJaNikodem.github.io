@@ -9,7 +9,6 @@ function toggleMenu() {
 }
 
 window.onclick = function (event) {
-	console.log(event.target);
 	if (!event.target.matches("#hamburger") && !event.target.closest("#hamburger")) {
 		if (
 			menu.classList.contains("active") &&
